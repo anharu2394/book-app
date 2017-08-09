@@ -1,0 +1,29 @@
+
+body {
+  /*リセットcss*/
+  background-color: #ffffff;
+  font-size: 14px;
+  color: #333;
+  margin: 0 auto;
+}
+h1,h2,h3,h4,h5,h6,p {
+  /*リセットcss*/
+  padding: 10px 0;
+  margin: 0;
+
+}
+.clearfix:after{
+  content: "";
+  clear: both;
+  display: block;
+}
+ul{
+list-style: none;
+}
+.logo {
+  float: left;
+}
+.action_button{
+  float: right;
+  margin: 5px;
+}

@@ -1,0 +1,18 @@
+Rails.application.routes.draw do
+
+  devise_for :users, controllers: {registrations: "users/registrations"}
+   resources :users, only: [:show]
+  resources :user_details, only: [:new,:create,:edit,:update]
+
+  resources :books, only: [:index,:show,:new,:create] do
+    collection do
+      get 'search'
+      get 'ranking'
+    end
+    resources :reviews
+  end
+
+  # get 'books/search' => 'books#search'
+root to:'books#index'
+
+end

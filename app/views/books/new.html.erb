@@ -1,0 +1,9 @@
+<div class-="">
+<h1>本の登録
+</h1>
+  <%= form_for [@book], html:{class: 'form'} do |f| %>
+    <p>タイトル：<%= f.text_field :title, html:{class: 'form-control'} %></p>
+    <p><%= button_tag "送信", type: "submit", class: "btn btn-defaults"%></p>
+
+  <% end %>
+</div>
