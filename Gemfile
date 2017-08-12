@@ -25,7 +25,12 @@ gem 'sdoc', '~> 0.4.0', group: :doc
   gem 'devise'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
-
+  gem 'kaminari'
+  gem 'twitter-bootstrap-rails'
+    gem 'spring'
+  gem 'pry-rails'
+  gem 'compass-rails','~> 2.0'
+  gem 'sprockets', '2.11.0'
 # Use Unicorn as the app server
 # gem 'unicorn'
 
