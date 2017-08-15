@@ -1,3 +1,4 @@
+
 <%if user_signed_in? && current_user.user_detail.nil?%>
 <div class="alert alert-danger" role="alert">
   <strong>プロフィールが登録されてません</strong><%= link_to"  いますぐプロフィールを登録してください プロフィールを設定する",new_user_detail_path,method: :get,class:"alert-link"%>
