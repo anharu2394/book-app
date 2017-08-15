@@ -5,6 +5,7 @@
   <% if current_user.user_detail.present? %>
   <p><%= current_user.user_detail.profile %></p>
   <p>性別：<%= current_user.user_detail.gender %></p>
+  <p>年齢：<%= current_user.user_detail.age %>歳</p>
  <%= link_to"編集", edit_user_registration_path,method: :get %>
   <%= link_to"プロフィールを編集する",edit_user_detail_path(current_user.user_detail.id),method: :get %>
   <% else %>
