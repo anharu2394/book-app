@@ -1,5 +1,8 @@
-<h1><%= @book.title %>の記録</h1>
+<h1><%= @book.title %></h1>
+<p>作者：<%= @book.writer %>さん</p>
+<%= link_to "Amazonで見る", "https://www.amazon.co.jp/s/ref=nb_sb_noss?__mk_ja_JP=%E3%82%AB%E3%82%BF%E3%82%AB%E3%83%8A&url=search-alias%3Dstripbooks&field-keywords=#{@book.title}"%>
 <p><%= link_to "この本の記録を書く",new_book_review_path(@book.id),method: :get %></p>
+<h2>記録一覧</h2>
 <div class="row">
   <% @review.each do |rv| %>
     <div class="col-md-4">

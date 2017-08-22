@@ -54,7 +54,7 @@ class BooksController < ApplicationController
   def search
     unless params[:keyword] == ""
       if params[:keyword].present?
-        @books = Book.where('title LIKE(?)', "%#{params[:keyword]}%").limit(20)
+        @books = Book.where('title LIKE(?) OR writer LIKE(?)', "%#{params[:keyword]}%", "%#{params[:keyword]}%" ).limit(20)
       end
     else
     end
@@ -158,6 +158,6 @@ end
 
   private
   def create_params
-    return params.require(:book).permit(:title)
+    return params.require(:book).permit(:title,:writer)
   end
 end

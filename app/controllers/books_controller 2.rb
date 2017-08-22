@@ -149,6 +149,6 @@ end
 
   private
   def create_params
-    return params.require(:book).permit(:title)
+    return params.require(:book).permit(:title,:writer)
   end
 end
