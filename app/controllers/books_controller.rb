@@ -64,8 +64,8 @@ def rank_create(type)
     rates = {}
     test = []
   user_details.each do |ud|
-      user = ud.user
-      reviews = user.reviews.group(:book_id).average(:rate)
+      users = ud.user
+      reviews = users.reviews.group(:book_id).average(:rate)
       rates = rates.merge(reviews)
     end
     rates.each do |id,rate|
