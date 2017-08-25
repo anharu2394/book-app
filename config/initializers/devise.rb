@@ -275,5 +275,9 @@ Devise.setup do |config|
   # so you need to do it manually. For the users scope, it would be:
   # config.omniauth_path_prefix = '/my_engine/users/auth'
   require 'devise/orm/active_record'
-
+  config.omniauth :google_oauth2,
+                  Rails.application.secrets.google_client_id, # 環境変数に先ほど控えたクライアントIDを入れておく
+                  Rails.application.secrets.google_client_secret, # 環境変数に先ほど控えたシークレットを入れておく
+                  name: :google,
+                  scope: %w(email)
 end
