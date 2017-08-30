@@ -3,8 +3,10 @@
 
     <div class='log-in-inner'>
      <div class="container"> <h2>会員登録</h2>
-      <p>googleで</p>
-      <%= link_to "Sign in with Google", user_google_oauth2_omniauth_authorize_path %>
+
+ <a class="btn btn-block btn-social btn-google" href="/users/auth/google_oauth2" style="width:50%;">
+    <span class="fa fa-google"></span>Googleでサインアップ
+  </a>
       <%= form_for(resource, as: resource_name, url: {action: "confirm"}) do |f| %>
         <%= devise_error_messages! %>
         <div class='form-group'>

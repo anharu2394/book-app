@@ -1,3 +1,4 @@
+<div class="container">
 <% if current_user.present? %>
 <% if current_user.id == @user.id %>
   <h1><%= current_user.username %>さんのマイページ</h1>
@@ -87,3 +88,4 @@
   <% end %>
   </div>
 <% end %>
+</div>
